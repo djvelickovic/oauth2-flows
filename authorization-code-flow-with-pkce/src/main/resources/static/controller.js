@@ -1,15 +1,32 @@
 const urlSearchParams = new URLSearchParams(window.location.search);
 const params = Object.fromEntries(urlSearchParams.entries());
 
-console.log(`code: ${params.code}`)
-console.log(`session_state: ${params.session_state}`)
-console.log(`state: ${params.state}`)
+const authorizeButton = document.querySelector('#authorize')
 
 const {code, session_state, state} = params
 
+const base64encode = (ascii) => {
+    return btoa(String.fromCharCode.apply(null, ascii))
+}
+
+const dec2hex = (dec) => {
+    return dec.toString(16).padStart(2, "0")
+}
+
+const randomString = (len) => {
+    const arr = new Uint8Array((len || 40) / 2)
+    window.crypto.getRandomValues(arr)
+    return Array.from(arr, dec2hex).join('')
+}
+
+authorizeButton.addEventListener('click', async (e) => {
+    e.preventDefault()
+    await authorize()
+})
+
 const authorize = async () => {
-    const state = uuidv4()
-    const codeVerifier = uuidv4()
+    const state = randomString(20)
+    const codeVerifier = randomString(60)
 
     const codeChallengeMethod = 'S256'
 
@@ -18,32 +35,22 @@ const authorize = async () => {
     const encoder = new TextEncoder();
     const data = encoder.encode(codeVerifier);
     const digest = await window.crypto.subtle.digest("SHA-256", data);
-    console.log(digest)
-
     let base64Digest = base64encode(new Uint8Array(digest))
 
-    console.log(base64Digest)
     // you can extract this replacing code to a function
     const codeChallengeB64 = base64Digest
         .replace(/\+/g, "-")
         .replace(/\//g, "_")
         .replace(/=/g, "");
 
-    console.log(codeChallengeB64)
-
     window.location = `http://localhost:8180/realms/OAuth2FlowsTest/protocol/openid-connect/auth?response_type=code&redirect_uri=http://localhost:8380&client_id=authorization-code-flow-with-pkce-demo&state=${state}&code_challenge=${codeChallengeB64}&code_challenge_method=${codeChallengeMethod}`
-}
-
-
-const base64encode = (ascii) => {
-    return btoa(String.fromCharCode.apply(null, ascii));
 }
 
 const getToken = async () => {
     const codeVerifier = window.localStorage.getItem('codeVerifier')
-    console.log(`code verifier: ${codeVerifier}`)
+
     const details = {
-        'response_type': 'authorization_code',
+        'grant_type': 'authorization_code',
         'client_id': 'authorization-code-flow-with-pkce-demo',
         'code_verifier': codeVerifier,
         'code': code,
@@ -52,43 +59,71 @@ const getToken = async () => {
 
     const formBody = [];
     for (const property in details) {
-        // const encodedKey = encodeURIComponent(property);
-        // const encodedValue = encodeURIComponent(details[property]);
-        // formBody.push(encodedKey + "=" + encodedValue);
         formBody.push(property + "=" + details[property]);
     }
     const request = formBody.join("&");
 
-    const url = `http://localhost:8180/realms/OAuth2FlowsTest/protocol/openid-connect/token`
-    const response = await fetch(url, {
+    const response = await fetch('http://localhost:8180/realms/OAuth2FlowsTest/protocol/openid-connect/token', {
         method: 'POST',
         body: request,
-        // mode: 'no-cors',
         headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
+            'Content-Type': 'application/x-www-form-urlencoded;  charset=UTF-8'
         },
     })
     return response.json()
 }
 
-const uuidv4 = () => {
-    return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, c =>
-        (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
-    );
+const hasTokenExpired = () => {
+    const expiresAt = Number(window.localStorage.getItem('expiresAt'))
+    return expiresAt - 10 * 1000 < Date.now()
 }
 
-// const sha256 = (string) => {
-//     const utf8 = new TextEncoder().encode(string);
-//     return crypto.subtle.digest('SHA-256', utf8).then((hashBuffer) => {
-//         const hashArray = Array.from(new Uint8Array(hashBuffer));
-//         // const hashHex = hashArray
-//         //     .map((bytes) => bytes.toString(16).padStart(2, '0'))
-//         //     .join('');
-//         // return hashHex;
-//         return hashArray;
-//     });
-// }
+const storeNewToken = (accessToken, expiresIn) => {
+    const expiresAt = Date.now() + expiresIn * 1000
+    window.localStorage.setItem('accessToken', accessToken)
+    window.localStorage.setItem('expiresAt', expiresAt + '')
+}
+
+const removeCodeAndState = () => {
+    const params = new URLSearchParams(window.location.search)
+    params.delete('code')
+    params.delete('session_state')
+    params.delete('state')
+    const paramsString = params.toString()
+    window.history.pushState("page without code", "Title", window.location.pathname + (paramsString ? '?' + paramsString : ''));
+}
+
+const startTokenExpirationChecker = () => {
+    const handle = setInterval(async () => {
+        if (hasTokenExpired()) {
+            console.log('Token has expired')
+            await authorize()
+            clearInterval(handle)
+        }
+        console.log('Checking access token')
+    }, 1000)
+}
 
 if (code && session_state && state) {
-    getToken().then(response => console.log(`Tokens: ${response}`)).catch(err => console.error(err))
+    getToken().then(tokens => {
+        const { access_token: accessToken, expires_in: expiresIn } = tokens
+        console.log(`Token expires in ${expiresIn}`)
+        storeNewToken(accessToken, expiresIn)
+        removeCodeAndState()
+        startTokenExpirationChecker()
+    })
+} else {
+    if (hasTokenExpired()) {
+        authorize().catch(err => console.error(err))
+    } else {
+        startTokenExpirationChecker()
+    }
+
 }
+
+
+
+
+
+
+
