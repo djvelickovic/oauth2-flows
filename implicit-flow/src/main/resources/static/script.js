@@ -12,13 +12,7 @@ const authorize = () => {
 }
 
 const removeSensitiveParams = () => {
-    const params = new URLSearchParams(window.location.search)
-    params.delete('access_token')
-    params.delete('session_state')
-    params.delete('token_type')
-    params.delete('expires_in')
-    const paramsString = params.toString()
-    window.history.pushState("page without sensitive headers", "Title", window.location.pathname + (paramsString ? '?' + paramsString : ''));
+    window.location.hash = ''
 }
 
 const startTokenExpirationChecker = () => {
