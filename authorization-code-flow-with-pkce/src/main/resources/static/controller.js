@@ -2,6 +2,7 @@ const urlSearchParams = new URLSearchParams(window.location.search);
 const params = Object.fromEntries(urlSearchParams.entries());
 
 const authorizeButton = document.querySelector('#authorize')
+const logoutButton = document.querySelector('#logout')
 
 const {code, session_state, state} = params
 
@@ -22,6 +23,12 @@ const randomString = (len) => {
 authorizeButton.addEventListener('click', async (e) => {
     e.preventDefault()
     await authorize()
+})
+
+logoutButton.addEventListener('click', async (e) => {
+    e.preventDefault()
+    window.localStorage.clear()
+    window.location = 'http://localhost:8180/realms/OAuth2FlowsTest/protocol/openid-connect/logout?redirect_uri=http://localhost:8380/'
 })
 
 const authorize = async () => {
