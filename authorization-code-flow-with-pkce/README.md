@@ -101,3 +101,5 @@ RFC 7636
 - https://auth0.com/docs/get-started/authentication-and-authorization-flow/which-oauth-2-0-flow-should-i-use
 - https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-proof-key-for-code-exchange-pkce
 - https://www.appsdeveloperblog.com/pkce-verification-in-authorization-code-grant/
+- 
+- Best practices for SPA: https://curity.io/resources/learn/spa-best-practices/
