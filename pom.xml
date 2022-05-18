@@ -24,6 +24,7 @@
         <module>implicit-flow</module>
         <module>resource-owner-password-flow</module>
         <module>client-credentials-flow</module>
+        <module>resource-server</module>
     </modules>
 
     <dependencies>
