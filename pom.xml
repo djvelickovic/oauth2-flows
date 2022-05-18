@@ -21,7 +21,7 @@
     <modules>
         <module>authorization-code-flow</module>
         <module>authorization-code-flow-with-pkce</module>
-        <module>implicit-flow</module>
+        <module>implicit-grant-flow</module>
         <module>resource-owner-password-flow</module>
         <module>client-credentials-flow</module>
         <module>resource-server</module>

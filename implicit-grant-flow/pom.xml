@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>io.libertus</groupId>
-    <artifactId>implicit-flow</artifactId>
+    <artifactId>implicit-grant-flow</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>implicit-flow</name>
     <description>implicit-flow</description>
