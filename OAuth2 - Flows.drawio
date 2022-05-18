@@ -1,0 +1,365 @@
+<mxfile host="Electron" modified="2022-05-18T23:00:51.213Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/18.0.6 Chrome/100.0.4896.143 Electron/18.2.3 Safari/537.36" etag="KOSN0Z6SwPtNd5kp7v8e" compressed="false" version="18.0.6" type="device" pages="6">
+  <diagram id="GNtyeUVHujWF4z2S78XG" name="Terminology">
+    <mxGraphModel dx="1949" dy="1899" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="hgEzp8NLohwu9T7bg09--1" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;endArrow=none;endFill=0;" edge="1" parent="1" source="hgEzp8NLohwu9T7bg09--3" target="hgEzp8NLohwu9T7bg09--12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hgEzp8NLohwu9T7bg09--3" value="Resource Owner" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="90" y="200" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hgEzp8NLohwu9T7bg09--4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="hgEzp8NLohwu9T7bg09--5" target="hgEzp8NLohwu9T7bg09--3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-210" y="220" />
+              <mxPoint x="-210" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hgEzp8NLohwu9T7bg09--5" value="Entity who owns requested data.&amp;nbsp;&lt;br&gt;&lt;br&gt;Can be real person or client." style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="-100" y="190" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="hgEzp8NLohwu9T7bg09--8" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;" edge="1" parent="1" source="hgEzp8NLohwu9T7bg09--12" target="hgEzp8NLohwu9T7bg09--15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hgEzp8NLohwu9T7bg09--12" value="Client" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="240" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hgEzp8NLohwu9T7bg09--13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="hgEzp8NLohwu9T7bg09--14" target="hgEzp8NLohwu9T7bg09--12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hgEzp8NLohwu9T7bg09--14" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;Client&lt;/b&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;- Application that requests protected data. It can be traditional web app, SPA, backend service, native mobile app etc...&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Clients can be &lt;b&gt;public&lt;/b&gt; or &lt;b&gt;confidential&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;b&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;public&lt;/b&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt; - publicly distributed, cannot securely keep &lt;/span&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;client_secret&lt;/b&gt;&lt;/div&gt;&lt;/b&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;(native app, SPA ...)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;b&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;confidential - &lt;/b&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;can securely keep client secret (traditional web app, backend service ...)&lt;/span&gt;&lt;/div&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="105" y="390" width="390" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="hgEzp8NLohwu9T7bg09--15" value="Resource Server" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="440" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hgEzp8NLohwu9T7bg09--16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="hgEzp8NLohwu9T7bg09--17" target="hgEzp8NLohwu9T7bg09--15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hgEzp8NLohwu9T7bg09--17" value="Server that hosts protected data.&lt;br&gt;&amp;nbsp;API that we want to access" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="610" y="270" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="hgEzp8NLohwu9T7bg09--20" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="hgEzp8NLohwu9T7bg09--24" target="hgEzp8NLohwu9T7bg09--3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="203.21428571428578" y="30" as="sourcePoint" />
+            <mxPoint x="10" y="132.07547169811323" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hgEzp8NLohwu9T7bg09--31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="hgEzp8NLohwu9T7bg09--24" target="hgEzp8NLohwu9T7bg09--12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hgEzp8NLohwu9T7bg09--24" value="Authorization Server" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="240" y="130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hgEzp8NLohwu9T7bg09--25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="hgEzp8NLohwu9T7bg09--26" target="hgEzp8NLohwu9T7bg09--24">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="400" y="-40" />
+              <mxPoint x="400" y="-40" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hgEzp8NLohwu9T7bg09--26" value="Server that authenticates ResourceOwner and issues Access Token.&lt;br&gt;&lt;br&gt;eg. Okta, Keycloak, Google OAuth2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="200" y="-50" width="200" height="110" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="B9-eg3q-reoNsIaTLfA-" name="Access Token">
+    <mxGraphModel dx="2173" dy="876" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="utoZqPj_fh1-FMmQgJy8-1" value="&lt;font color=&quot;#ff3333&quot;&gt;eyJhbGciOiJSUzI1NiIsInR5c&lt;/font&gt;.&lt;font color=&quot;#00cc00&quot;&gt;YzlhNWIxIiwidHlwIjoiQ&lt;/font&gt;.CfUtW6gfTyWm5Amc" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-480" y="239.5" width="460" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="utoZqPj_fh1-FMmQgJy8-2" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#00CC00;endArrow=none;endFill=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="utoZqPj_fh1-FMmQgJy8-8" target="utoZqPj_fh1-FMmQgJy8-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-420" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="utoZqPj_fh1-FMmQgJy8-3" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontColor=#00CC00;endArrow=none;endFill=0;" edge="1" parent="1" source="utoZqPj_fh1-FMmQgJy8-9" target="utoZqPj_fh1-FMmQgJy8-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="utoZqPj_fh1-FMmQgJy8-4" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;fontColor=#00CC00;endArrow=none;endFill=0;" edge="1" parent="1" source="utoZqPj_fh1-FMmQgJy8-5" target="utoZqPj_fh1-FMmQgJy8-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="utoZqPj_fh1-FMmQgJy8-5" value="&lt;font color=&quot;#000000&quot;&gt;Signature&lt;br&gt;HMAC or RSA&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#333333;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="-160" y="130" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="utoZqPj_fh1-FMmQgJy8-6" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;pre style=&quot;box-sizing: border-box; font-family: &amp;quot;Roboto Mono&amp;quot;, monospace; margin: 0px; overflow: auto; background-color: rgb(255, 255, 255); border-radius: 0px 4px 4px; font-size: 0.85rem; max-width: 100%; overflow-wrap: break-word; counter-reset: line-numbers 0; appearance: none; border: none; box-shadow: rgba(0, 0, 0, 0.04) 0px 2px 4px; color: rgb(170, 170, 170); min-width: 100%; padding: 1rem; position: relative; transition: box-shadow 0.3s ease-in-out 0s, background 0.3s ease-in-out 0s, transform 0.3s ease-in-out 0s; width: 342.594px; word-break: break-all; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot; class=&quot;tools-input&quot;&gt;&lt;code style=&quot;box-sizing: border-box; font-family: &amp;quot;Roboto Mono&amp;quot;, monospace; background-color: transparent; border-radius: 3px; overflow-wrap: break-word; font-size: inherit; overflow-x: auto; word-break: break-all;&quot; class=&quot;json&quot;&gt;&lt;span style=&quot;box-sizing: border-box; position: relative;&quot; class=&quot;line&quot;&gt;{&lt;/span&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 3em; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;  exp&lt;/span&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 173, 100);&quot; class=&quot;number&quot;&gt; &lt;span style=&quot;box-sizing: border-box; position: relative;&quot; data-tooltip=&quot;Wed, 18 May 2022 21:36:01 GMT&quot; data-tooltip-long=&quot;true&quot;&gt;1652909761&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 3em; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;  iat&lt;/span&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 173, 100);&quot; class=&quot;number&quot;&gt; &lt;span style=&quot;box-sizing: border-box; position: relative;&quot; data-tooltip=&quot;Wed, 18 May 2022 21:26:01 GMT&quot; data-tooltip-long=&quot;true&quot;&gt;1652909161&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 3em; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;  jti&lt;/span&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(199, 134, 13);&quot; class=&quot;string&quot;&gt; 624b6c1c-aa3d-4132-ad19-dc109e9a1f26&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 3em; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;  iss&lt;/span&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(199, 134, 13);&quot; class=&quot;string&quot;&gt; http://localhost:8180/realms/OAuth2FlowsTest&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 3em; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;  aud&lt;/span&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(199, 134, 13);&quot; class=&quot;string&quot;&gt; account&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 3em; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;  sub&lt;/span&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(199, 134, 13);&quot; class=&quot;string&quot;&gt; 9385de9d-c198-4a59-a0fe-c1956cc9a5b1&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 3em; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;  typ&lt;/span&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(199, 134, 13);&quot; class=&quot;string&quot;&gt; Bearer&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 3em; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;  azp&lt;/span&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(199, 134, 13);&quot; class=&quot;string&quot;&gt; client-credentials-flow-demo&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 3em; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;  acr&lt;/span&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(199, 134, 13);&quot; class=&quot;string&quot;&gt; 1&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 3em; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;  allowed-origins&lt;/span&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 0px; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;    &lt;/span&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(199, 134, 13);&quot; class=&quot;string&quot;&gt; http://localhost:8480&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 0px; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;    &lt;/span&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(199, 134, 13);&quot; class=&quot;string&quot;&gt; http://localhost:8480/*&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 3em; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;  realm_access&lt;/span&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 0px; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;    roles&lt;/span&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 0px; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;      &lt;/span&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(199, 134, 13);&quot; class=&quot;string&quot;&gt; default-roles-oauth2flowstest&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 0px; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;      &lt;/span&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(199, 134, 13);&quot; class=&quot;string&quot;&gt; offline_access&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 0px; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;      &lt;/span&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(199, 134, 13);&quot; class=&quot;string&quot;&gt; uma_authorization&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 3em; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;  resource_access&lt;/span&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 0px; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;    account&lt;/span&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 0px; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;      roles&lt;/span&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 0px; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;        &lt;/span&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(199, 134, 13);&quot; class=&quot;string&quot;&gt; manage-account&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 0px; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;        &lt;/span&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(199, 134, 13);&quot; class=&quot;string&quot;&gt; manage-account-links&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 0px; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;        &lt;/span&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(199, 134, 13);&quot; class=&quot;string&quot;&gt; view-profile&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 3em; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;  scope&lt;/span&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(199, 134, 13);&quot; class=&quot;string&quot;&gt; email profile&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 3em; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;  clientId&lt;/span&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(199, 134, 13);&quot; class=&quot;string&quot;&gt; client-credentials-flow-demo&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 3em; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;  clientHost&lt;/span&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(199, 134, 13);&quot; class=&quot;string&quot;&gt; 127.0.0.1&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 3em; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;  email_verified&lt;/span&gt;&lt;span style=&quot;box-sizing: border-box;&quot; class=&quot;boolean&quot;&gt; false&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 3em; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;  preferred_username&lt;/span&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(199, 134, 13);&quot; class=&quot;string&quot;&gt; service-account-client-credentials-flow-demo&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 3em; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;  clientAddress&lt;/span&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(199, 134, 13);&quot; class=&quot;string&quot;&gt; 127.0.0.1&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;box-sizing: border-box; position: relative;&quot; class=&quot;line&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-140" y="370" width="370" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="utoZqPj_fh1-FMmQgJy8-7" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;pre style=&quot;box-sizing: border-box; font-family: &amp;quot;Roboto Mono&amp;quot;, monospace; margin: 0px; overflow: auto; background-color: rgb(255, 255, 255); border-radius: 0px 4px 4px; font-size: 0.85rem; max-width: 100%; overflow-wrap: break-word; counter-reset: line-numbers 0; appearance: none; border: none; box-shadow: rgba(0, 0, 0, 0.04) 0px 2px 4px; color: rgb(170, 170, 170); min-width: 100%; padding: 1rem; position: relative; transition: box-shadow 0.3s ease-in-out 0s, background 0.3s ease-in-out 0s, transform 0.3s ease-in-out 0s; width: 342.594px; word-break: break-all; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot; class=&quot;tools-input&quot;&gt;&lt;code style=&quot;box-sizing: border-box; font-family: &amp;quot;Roboto Mono&amp;quot;, monospace; background-color: transparent; border-radius: 3px; overflow-wrap: break-word; font-size: inherit; overflow-x: auto; word-break: break-all;&quot; class=&quot;json&quot;&gt;&lt;span style=&quot;box-sizing: border-box; position: relative;&quot; class=&quot;line&quot;&gt;{&lt;/span&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 3em; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;  alg&lt;/span&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(199, 134, 13);&quot; class=&quot;string&quot;&gt; RS256&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 3em; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;  typ&lt;/span&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(199, 134, 13);&quot; class=&quot;string&quot;&gt; JWT&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;box-sizing: border-box; position: relative; padding-left: 3em; text-indent: -3em;&quot; class=&quot;line&quot;&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(0, 111, 209);&quot; class=&quot;key&quot;&gt;  kid&lt;/span&gt;&lt;span style=&quot;box-sizing: border-box; color: rgb(199, 134, 13);&quot; class=&quot;string&quot;&gt; 3VR2C7duo8P0xAzvCofrJqL6JVJqHzGnKlNCURP6Syo&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;box-sizing: border-box; position: relative;&quot; class=&quot;line&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-580" y="370" width="370" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="utoZqPj_fh1-FMmQgJy8-8" value="&lt;font color=&quot;#000000&quot;&gt;Header&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#333333;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="-580" y="350" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="utoZqPj_fh1-FMmQgJy8-9" value="&lt;font color=&quot;#000000&quot;&gt;Payload&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#333333;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="-170" y="360" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="utoZqPj_fh1-FMmQgJy8-10" value="JWT" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-460" y="219.5" width="40" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="oQ3hx4EpauHgtx6_DZOH" name="Authorisation Code Flow">
+    <mxGraphModel dx="1746" dy="1276" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="P5rBycBprqKhrHOGtJ9Z-2" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;" parent="1" source="MmDaFH2p1h4jBCZkYRGw-1" target="MmDaFH2p1h4jBCZkYRGw-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P5rBycBprqKhrHOGtJ9Z-16" value="1) Requests page: http://example.com/user/1234" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontFamily=Helvetica;rotation=20;" parent="P5rBycBprqKhrHOGtJ9Z-2" vertex="1" connectable="0">
+          <mxGeometry x="0.0745" y="1" relative="1" as="geometry">
+            <mxPoint x="-7" y="9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MmDaFH2p1h4jBCZkYRGw-1" value="Resource Owner" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="-100" y="200" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P5rBycBprqKhrHOGtJ9Z-3" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="MmDaFH2p1h4jBCZkYRGw-5" target="MmDaFH2p1h4jBCZkYRGw-13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P5rBycBprqKhrHOGtJ9Z-13" value="5) Sends:&lt;br&gt;+ authorization code&lt;br&gt;+ credentials&lt;br&gt;+ redirect uri" style="edgeLabel;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontFamily=Helvetica;" parent="P5rBycBprqKhrHOGtJ9Z-3" vertex="1" connectable="0">
+          <mxGeometry x="-0.3524" y="3" relative="1" as="geometry">
+            <mxPoint x="-57" y="-70" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P5rBycBprqKhrHOGtJ9Z-7" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;" parent="1" source="MmDaFH2p1h4jBCZkYRGw-5" target="MmDaFH2p1h4jBCZkYRGw-10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P5rBycBprqKhrHOGtJ9Z-8" value="Calls with the &lt;br&gt;Access Token" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontFamily=Helvetica;" parent="P5rBycBprqKhrHOGtJ9Z-7" vertex="1" connectable="0">
+          <mxGeometry x="0.1886" y="1" relative="1" as="geometry">
+            <mxPoint x="-11" y="-19" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P5rBycBprqKhrHOGtJ9Z-19" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.3333333333333333;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Helvetica;fontSize=12;" parent="1" source="MmDaFH2p1h4jBCZkYRGw-5" target="MmDaFH2p1h4jBCZkYRGw-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P5rBycBprqKhrHOGtJ9Z-20" value="&lt;div style=&quot;text-align: left;&quot;&gt;2) Client redirects user &lt;br&gt;to the authorization&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;endpoint&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;+ creates&lt;b&gt; client user session&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;+ generates &lt;b&gt;state&lt;/b&gt; token&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontFamily=Helvetica;rotation=15;labelBackgroundColor=none;" parent="P5rBycBprqKhrHOGtJ9Z-19" vertex="1" connectable="0">
+          <mxGeometry x="0.2255" y="-3" relative="1" as="geometry">
+            <mxPoint x="69" y="-26" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MmDaFH2p1h4jBCZkYRGw-5" value="Client&lt;br&gt;&lt;i&gt;Web App&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="240" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MmDaFH2p1h4jBCZkYRGw-10" value="Resource Server" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="480" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P5rBycBprqKhrHOGtJ9Z-9" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="1" source="MmDaFH2p1h4jBCZkYRGw-13" target="MmDaFH2p1h4jBCZkYRGw-5" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="310" y="60" as="sourcePoint" />
+            <mxPoint x="320" y="280" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="400" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P5rBycBprqKhrHOGtJ9Z-12" value="4) Redirects user to &lt;br&gt;the auth endpoint of&lt;br&gt;the client application. &lt;br&gt;Sends &lt;b&gt;code&lt;/b&gt; and&amp;nbsp;&lt;b&gt;state&lt;br&gt;&lt;/b&gt;&amp;nbsp;as part of the request" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontFamily=Helvetica;" parent="P5rBycBprqKhrHOGtJ9Z-9" vertex="1" connectable="0">
+          <mxGeometry x="-0.56" y="3" relative="1" as="geometry">
+            <mxPoint x="64" y="80" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P5rBycBprqKhrHOGtJ9Z-14" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="MmDaFH2p1h4jBCZkYRGw-13" target="MmDaFH2p1h4jBCZkYRGw-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="203.21428571428578" y="30" as="sourcePoint" />
+            <mxPoint x="10" y="132.07547169811323" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P5rBycBprqKhrHOGtJ9Z-15" value="3) Authenticate User:&lt;br&gt;+ Shows login page&lt;br&gt;+ Consent" style="edgeLabel;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontFamily=Helvetica;" parent="P5rBycBprqKhrHOGtJ9Z-14" vertex="1" connectable="0">
+          <mxGeometry x="-0.175" relative="1" as="geometry">
+            <mxPoint x="-42" y="-22" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aKRBjrWTUu0g9Y8Uc83g-4" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" parent="1" source="MmDaFH2p1h4jBCZkYRGw-13" target="MmDaFH2p1h4jBCZkYRGw-5" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="190" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aKRBjrWTUu0g9Y8Uc83g-7" value="6) respond with&amp;nbsp;&lt;br&gt;access token" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" parent="aKRBjrWTUu0g9Y8Uc83g-4" vertex="1" connectable="0">
+          <mxGeometry x="-0.2612" relative="1" as="geometry">
+            <mxPoint x="-31" y="37" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MmDaFH2p1h4jBCZkYRGw-13" value="Authorization Server" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="240" y="-60" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aKRBjrWTUu0g9Y8Uc83g-9" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;b style=&quot;color: rgb(33, 33, 33); font-family: Inter, system-ui, -apple-system, system-ui, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, Cantarell, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, Helvetica, Arial, sans-serif; background-color: initial;&quot;&gt;2 - Authorization call&lt;/b&gt;&lt;/div&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Inter, system-ui, -apple-system, system-ui, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, Cantarell, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, Helvetica, Arial, sans-serif;&quot;&gt;&lt;b&gt;GET&lt;/b&gt; http://keycloak-server.com/realms/OAuth2FlowsTest/protocol/openid-connect/auth&lt;br&gt;?&lt;b&gt;response_type&lt;/b&gt;=code&lt;br&gt;&amp;amp;&lt;b&gt;redirect_uri&lt;/b&gt;=http://localhost:8280/client-oauth2&lt;br&gt;&amp;amp;&lt;b&gt;client_id&lt;/b&gt;=authorization-code-flow-demo&lt;br&gt;&amp;amp;&lt;b&gt;state&lt;/b&gt;=1234&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;align=left;fillColor=#d5e8d4;strokeColor=#82b366;labelBackgroundColor=none;spacing=10;" parent="1" vertex="1">
+          <mxGeometry x="-240" y="400" width="440" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="aKRBjrWTUu0g9Y8Uc83g-11" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;font face=&quot;Inter, system-ui, -apple-system, system-ui, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica, Arial, sans-serif&quot; color=&quot;#212121&quot;&gt;&lt;b&gt;4 - Redirect with Code&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Inter, system-ui, -apple-system, system-ui, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, Cantarell, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, Helvetica, Arial, sans-serif;&quot;&gt;&lt;b&gt;GET&lt;/b&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Inter, system-ui, -apple-system, system-ui, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, Cantarell, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, Helvetica, Arial, sans-serif;&quot;&gt;http://localhost:8280/client-oauth2&lt;br&gt;&lt;b&gt;?code&lt;/b&gt;=&amp;lt;generated-code&amp;gt;&lt;br&gt;&lt;b&gt;&amp;amp;state&lt;/b&gt;=&amp;lt;echoed-value&amp;gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;align=left;fillColor=#d5e8d4;strokeColor=#82b366;labelBackgroundColor=none;spacing=10;" parent="1" vertex="1">
+          <mxGeometry x="470" y="200" width="250" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="aKRBjrWTUu0g9Y8Uc83g-12" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;font face=&quot;Inter, system-ui, -apple-system, system-ui, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica, Arial, sans-serif&quot; color=&quot;#212121&quot;&gt;&lt;b&gt;5 - Token fetch&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Inter, system-ui, -apple-system, system-ui, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, Cantarell, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, Helvetica, Arial, sans-serif;&quot;&gt;&lt;b&gt;POST&lt;/b&gt;&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Inter, system-ui, -apple-system, system-ui, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica, Arial, sans-serif&quot; color=&quot;#212121&quot;&gt;http://keycloak-server.com/realms/OAuth2FlowsTest/protocol/openid-connect/token&lt;br&gt;&lt;b&gt;?grant_type=&lt;/b&gt;authorization_code&lt;br&gt;&lt;b&gt;&amp;amp;code&lt;/b&gt;=&amp;lt;received code&amp;gt;&lt;br&gt;&lt;b&gt;&amp;amp;redirect_uri&lt;/b&gt;=http://localhost:8280/client-oauth2&lt;br&gt;&lt;b&gt;&amp;amp;client_id&lt;/b&gt;=authorization-code-flow-demo&lt;br&gt;&lt;b&gt;&amp;amp;client_secret&lt;/b&gt;=&amp;nbsp;MENUn2vgRIs81&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;align=left;fillColor=#d5e8d4;strokeColor=#82b366;labelBackgroundColor=none;spacing=10;" parent="1" vertex="1">
+          <mxGeometry x="390" y="-80" width="450" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="aKRBjrWTUu0g9Y8Uc83g-14" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Logout&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Should remove access token from the browser&amp;nbsp;and invalidate &lt;b&gt;SSO session&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=12;fillColor=#f8cecc;strokeColor=#b85450;perimeterSpacing=2;spacing=10;" parent="1" vertex="1">
+          <mxGeometry y="560" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="aKRBjrWTUu0g9Y8Uc83g-15" value="Authorization Code Flow" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=24;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry y="-310" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZXX-m7xzJH7CsxgD5r9h-2" value="&lt;span style=&quot;color: rgba(0, 0, 0, 0.86); letter-spacing: -0.01px; caret-color: rgba(0, 0, 0, 0.86);&quot;&gt;This flow is suitable for &lt;b&gt;confidential&lt;/b&gt; clients e.g. traditional web apps with sessions.&lt;/span&gt;&lt;span style=&quot;letter-spacing: -0.01px; color: rgba(0, 0, 0, 0.86); caret-color: rgba(0, 0, 0, 0.86);&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;letter-spacing: -0.01px; color: rgba(0, 0, 0, 0.86); caret-color: rgba(0, 0, 0, 0.86);&quot;&gt;It&#39;s considered the&amp;nbsp;&lt;b&gt;safest&lt;/b&gt;&amp;nbsp;choice since the Access Token is passed&amp;nbsp;&lt;b&gt;directly&amp;nbsp;&lt;/b&gt;to the web server hosting the Client,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;letter-spacing: -0.01px; color: rgba(0, 0, 0, 0.86); caret-color: rgba(0, 0, 0, 0.86);&quot;&gt;without going through the user&#39;s web browser and risking exposure.&lt;br&gt;&lt;br&gt;Token is stored in the browser or native app.&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingTop=0;spacing=10;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="240" y="400" width="460" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ZXX-m7xzJH7CsxgD5r9h-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="ZXX-m7xzJH7CsxgD5r9h-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="120" y="20" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZXX-m7xzJH7CsxgD5r9h-4" value="If user is already logged in on the authorization server (SSO) - then this step will be skipped and flow will jump to the step &lt;b&gt;4)&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="-200" y="-120" width="210" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Hji1mYZwB4uZUrQSujEg-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Hji1mYZwB4uZUrQSujEg-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="60" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Hji1mYZwB4uZUrQSujEg-1" value="Save requested page &lt;b&gt;url&lt;/b&gt; with &lt;b&gt;state&lt;/b&gt; key so client can redirect user back when authorization pass" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="-140" y="310" width="160" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="TSWYW_h4BEvnl2f5ariD" name="Authorization Flow with PKCE">
+    <mxGraphModel dx="2173" dy="2045" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zpQhhsPqWd-TJFMvLcyz-1" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;" edge="1" parent="1" source="zpQhhsPqWd-TJFMvLcyz-3" target="zpQhhsPqWd-TJFMvLcyz-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zpQhhsPqWd-TJFMvLcyz-2" value="1) Requests page" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontFamily=Helvetica;rotation=15;" vertex="1" connectable="0" parent="zpQhhsPqWd-TJFMvLcyz-1">
+          <mxGeometry x="0.0745" y="1" relative="1" as="geometry">
+            <mxPoint x="-27" y="6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zpQhhsPqWd-TJFMvLcyz-3" value="Resource Owner" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="-100" y="200" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zpQhhsPqWd-TJFMvLcyz-4" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="zpQhhsPqWd-TJFMvLcyz-10" target="zpQhhsPqWd-TJFMvLcyz-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zpQhhsPqWd-TJFMvLcyz-5" value="5) Sends:&lt;br&gt;+ authorization code&lt;br&gt;+ credentials&lt;br&gt;+ redirect uri" style="edgeLabel;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontFamily=Helvetica;" vertex="1" connectable="0" parent="zpQhhsPqWd-TJFMvLcyz-4">
+          <mxGeometry x="-0.3524" y="3" relative="1" as="geometry">
+            <mxPoint x="-47" y="-49" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zpQhhsPqWd-TJFMvLcyz-6" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;" edge="1" parent="1" source="zpQhhsPqWd-TJFMvLcyz-10" target="zpQhhsPqWd-TJFMvLcyz-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zpQhhsPqWd-TJFMvLcyz-7" value="Calls with the &lt;br&gt;Access Token" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontFamily=Helvetica;" vertex="1" connectable="0" parent="zpQhhsPqWd-TJFMvLcyz-6">
+          <mxGeometry x="0.1886" y="1" relative="1" as="geometry">
+            <mxPoint x="-11" y="-19" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zpQhhsPqWd-TJFMvLcyz-8" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.3333333333333333;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Helvetica;fontSize=12;" edge="1" parent="1" source="zpQhhsPqWd-TJFMvLcyz-10" target="zpQhhsPqWd-TJFMvLcyz-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zpQhhsPqWd-TJFMvLcyz-9" value="&lt;div style=&quot;text-align: left;&quot;&gt;2) Client redirects user &lt;br&gt;to the authorization&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;endpoint&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+ generates &lt;/span&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;state&lt;/b&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; token&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;+ sends code challenge&amp;nbsp;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontFamily=Helvetica;rotation=15;labelBackgroundColor=none;" vertex="1" connectable="0" parent="zpQhhsPqWd-TJFMvLcyz-8">
+          <mxGeometry x="0.2255" y="-3" relative="1" as="geometry">
+            <mxPoint x="69" y="-26" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zpQhhsPqWd-TJFMvLcyz-10" value="Client&lt;br&gt;&lt;i&gt;Web App&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="240" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zpQhhsPqWd-TJFMvLcyz-11" value="Resource Server" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="480" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zpQhhsPqWd-TJFMvLcyz-12" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="zpQhhsPqWd-TJFMvLcyz-18" target="zpQhhsPqWd-TJFMvLcyz-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="310" y="60" as="sourcePoint" />
+            <mxPoint x="320" y="280" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="400" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zpQhhsPqWd-TJFMvLcyz-13" value="4) Redirects user to &lt;br&gt;the auth endpoint of&lt;br&gt;the client application" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontFamily=Helvetica;" vertex="1" connectable="0" parent="zpQhhsPqWd-TJFMvLcyz-12">
+          <mxGeometry x="-0.56" y="3" relative="1" as="geometry">
+            <mxPoint x="76" y="80" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zpQhhsPqWd-TJFMvLcyz-14" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="zpQhhsPqWd-TJFMvLcyz-18" target="zpQhhsPqWd-TJFMvLcyz-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="203.21428571428578" y="30" as="sourcePoint" />
+            <mxPoint x="10" y="132.07547169811323" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zpQhhsPqWd-TJFMvLcyz-15" value="3) Authenticate User:&lt;br&gt;+ Shows login page&lt;br&gt;+ Consent" style="edgeLabel;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontFamily=Helvetica;" vertex="1" connectable="0" parent="zpQhhsPqWd-TJFMvLcyz-14">
+          <mxGeometry x="-0.175" relative="1" as="geometry">
+            <mxPoint x="-42" y="-22" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zpQhhsPqWd-TJFMvLcyz-16" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="zpQhhsPqWd-TJFMvLcyz-18" target="zpQhhsPqWd-TJFMvLcyz-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="190" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zpQhhsPqWd-TJFMvLcyz-17" value="6) respond with&amp;nbsp;&lt;br&gt;access token" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="zpQhhsPqWd-TJFMvLcyz-16">
+          <mxGeometry x="-0.2612" relative="1" as="geometry">
+            <mxPoint x="-31" y="37" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zpQhhsPqWd-TJFMvLcyz-18" value="Authorization Server" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="240" y="-60" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zpQhhsPqWd-TJFMvLcyz-19" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;b style=&quot;color: rgb(33, 33, 33); font-family: Inter, system-ui, -apple-system, system-ui, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, Cantarell, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, Helvetica, Arial, sans-serif; background-color: initial;&quot;&gt;2 - Authorization call&lt;/b&gt;&lt;/div&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Inter, system-ui, -apple-system, system-ui, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, Cantarell, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, Helvetica, Arial, sans-serif;&quot;&gt;&lt;b&gt;GET&lt;/b&gt; http://keycloak-server.com/realms/OAuth2FlowsTest/protocol/openid-connect/auth&lt;br&gt;?&lt;b&gt;response_type&lt;/b&gt;=code&lt;br&gt;&amp;amp;&lt;b&gt;redirect_uri&lt;/b&gt;=http://localhost:8280/client-oauth2&lt;br&gt;&amp;amp;&lt;b&gt;client_id&lt;/b&gt;=authorization-code-flow-demo&lt;br&gt;&amp;amp;&lt;b&gt;state&lt;/b&gt;=1234&lt;br&gt;&amp;amp;&lt;b&gt;code_challenge&lt;/b&gt;=d12asdh83wd8fjs&lt;br&gt;&amp;amp;&lt;b&gt;code_challenge_method&lt;/b&gt;=S256&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;align=left;fillColor=#d5e8d4;strokeColor=#82b366;labelBackgroundColor=none;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="-240" y="360" width="440" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="zpQhhsPqWd-TJFMvLcyz-20" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;font face=&quot;Inter, system-ui, -apple-system, system-ui, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica, Arial, sans-serif&quot; color=&quot;#212121&quot;&gt;&lt;b&gt;4 - Redirect with Code&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Inter, system-ui, -apple-system, system-ui, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, Cantarell, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, Helvetica, Arial, sans-serif;&quot;&gt;&lt;b&gt;GET&lt;/b&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Inter, system-ui, -apple-system, system-ui, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, Cantarell, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, Helvetica, Arial, sans-serif;&quot;&gt;http://localhost:8280/client-oauth2&lt;br&gt;&lt;b&gt;?code&lt;/b&gt;=&amp;lt;generated-code&amp;gt;&lt;br&gt;&lt;b&gt;&amp;amp;state&lt;/b&gt;=&amp;lt;echoed-value&amp;gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;align=left;fillColor=#d5e8d4;strokeColor=#82b366;labelBackgroundColor=none;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="440" y="190" width="250" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="zpQhhsPqWd-TJFMvLcyz-21" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;font face=&quot;Inter, system-ui, -apple-system, system-ui, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica, Arial, sans-serif&quot; color=&quot;#212121&quot;&gt;&lt;b&gt;5 - Token fetch&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Inter, system-ui, -apple-system, system-ui, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, Cantarell, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, Helvetica, Arial, sans-serif;&quot;&gt;&lt;b&gt;POST&lt;/b&gt;&amp;nbsp;&lt;/span&gt;&lt;font face=&quot;Inter, system-ui, -apple-system, system-ui, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica, Arial, sans-serif&quot; color=&quot;#212121&quot;&gt;http://keycloak-server.com/realms/OAuth2FlowsTest/protocol/openid-connect/token&lt;br&gt;&lt;b&gt;?grant_type=&lt;/b&gt;authorization_code&lt;br&gt;&lt;b&gt;&amp;amp;code&lt;/b&gt;=&amp;lt;received code&amp;gt;&lt;br&gt;&lt;b&gt;&amp;amp;redirect_uri&lt;/b&gt;=http://localhost:8280/client-oauth2&lt;br&gt;&lt;b&gt;&amp;amp;client_id&lt;/b&gt;=authorization-code-flow-demo&lt;br&gt;&amp;amp;&lt;b&gt;code_verifier&lt;/b&gt;=gvbrasf43gsdf&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;align=left;fillColor=#d5e8d4;strokeColor=#82b366;labelBackgroundColor=none;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="390" y="-80" width="450" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="zpQhhsPqWd-TJFMvLcyz-22" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Logout&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Should invalidate both &lt;b&gt;client&lt;/b&gt;&amp;nbsp;&lt;b&gt;user session&lt;/b&gt; and invalidate &lt;b&gt;Authorization Server session&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=12;fillColor=#f8cecc;strokeColor=#b85450;perimeterSpacing=2;spacing=10;" vertex="1" parent="1">
+          <mxGeometry y="520" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="zpQhhsPqWd-TJFMvLcyz-23" value="&lt;span style=&quot;color: rgba(0, 0, 0, 0.86); letter-spacing: -0.01px; caret-color: rgba(0, 0, 0, 0.86);&quot;&gt;This flow is suitable for public clients. &lt;br&gt;&lt;br&gt;But, If public clients use Authorization Code Grant flow, they risk&amp;nbsp;leaking a code in the insecure redirections. In order to additionally secure the authorization process, &lt;b&gt;PKCE&lt;/b&gt; (Proof Key for Code Exchange) is used.&lt;/span&gt;&lt;span style=&quot;letter-spacing: -0.01px; color: rgba(0, 0, 0, 0.86); caret-color: rgba(0, 0, 0, 0.86);&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingTop=0;spacing=10;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="240" y="399" width="459" height="121" as="geometry" />
+        </mxCell>
+        <mxCell id="zpQhhsPqWd-TJFMvLcyz-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="zpQhhsPqWd-TJFMvLcyz-25">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="120" y="20" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zpQhhsPqWd-TJFMvLcyz-25" value="If user is already logged in on the authorization server (SSO) - then this step will be skipped and flow will jump to the step &lt;b&gt;4)&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="-200" y="-120" width="210" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="T6sktn_JANHmwzhQgu_C-1" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;code_verifier&lt;/b&gt; - generated 43 - 120 length secure random value&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;code_challenge&lt;/b&gt; - BASE64_URL_ENCODED(SHA256(ASCII(code_verifier))&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;code_method&lt;/b&gt; - plain | S256&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="560" width="430" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="WBeOXAz6DtB0BywwNWER" name="Client Credentials Flow">
+    <mxGraphModel dx="1346" dy="876" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="E-dZzVBnIA5CM6RSvb5p" name="Implicit Flow with Form Post">
+    <mxGraphModel dx="1346" dy="876" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
