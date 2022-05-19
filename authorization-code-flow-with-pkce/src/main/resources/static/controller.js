@@ -4,7 +4,13 @@ const params = Object.fromEntries(urlSearchParams.entries());
 const authorizeButton = document.querySelector('#authorize')
 const logoutButton = document.querySelector('#logout')
 
-const {code, session_state, state} = params
+const {code, state} = params
+
+const authorizationEndpoint = 'http://localhost:8180/realms/OAuth2FlowsTest/protocol/openid-connect/auth'
+const tokenEndpoint = 'http://localhost:8180/realms/OAuth2FlowsTest/protocol/openid-connect/token'
+const logoutEndpoint = 'http://localhost:8180/realms/OAuth2FlowsTest/protocol/openid-connect/logout?redirect_uri=http://localhost:8380/'
+const clientId = 'authorization-code-flow-with-pkce-demo'
+const redirectUri = 'http://localhost:8380'
 
 const base64encode = (ascii) => {
     return btoa(String.fromCharCode.apply(null, ascii))
@@ -27,68 +33,71 @@ authorizeButton.addEventListener('click', async (e) => {
 
 logoutButton.addEventListener('click', async (e) => {
     e.preventDefault()
-    window.localStorage.clear()
-    window.location = 'http://localhost:8180/realms/OAuth2FlowsTest/protocol/openid-connect/logout?redirect_uri=http://localhost:8380/'
+    window.sessionStorage.clear()
+    window.location = logoutEndpoint
 })
 
 const authorize = async () => {
     const state = randomString(20)
-    const codeVerifier = randomString(60)
+
+    const codeVerifier = randomString(100)
 
     const codeChallengeMethod = 'S256'
+    const codeChallengeB64 = await generateCodeChallenge(codeVerifier)
 
-    window.localStorage.setItem('codeVerifier', codeVerifier)
+    window.sessionStorage.setItem('codeVerifier', codeVerifier)
+    window.sessionStorage.setItem(state, window.location.href)
 
-    const encoder = new TextEncoder();
-    const data = encoder.encode(codeVerifier);
-    const digest = await window.crypto.subtle.digest("SHA-256", data);
+    window.location = `${authorizationEndpoint}?response_type=code&redirect_uri=${redirectUri}&client_id=${clientId}&state=${state}&code_challenge=${codeChallengeB64}&code_challenge_method=${codeChallengeMethod}`
+}
+
+const generateCodeChallenge = async (codeVerifier) => {
+    const encoder = new TextEncoder()
+    const data = encoder.encode(codeVerifier)
+    const digest = await window.crypto.subtle.digest("SHA-256", data)
     let base64Digest = base64encode(new Uint8Array(digest))
 
-    // you can extract this replacing code to a function
     const codeChallengeB64 = base64Digest
         .replace(/\+/g, "-")
         .replace(/\//g, "_")
-        .replace(/=/g, "");
+        .replace(/=/g, "")
 
-    window.location = `http://localhost:8180/realms/OAuth2FlowsTest/protocol/openid-connect/auth?response_type=code&redirect_uri=http://localhost:8380&client_id=authorization-code-flow-with-pkce-demo&state=${state}&code_challenge=${codeChallengeB64}&code_challenge_method=${codeChallengeMethod}`
+    return codeChallengeB64
 }
 
 const getToken = async () => {
-    const codeVerifier = window.localStorage.getItem('codeVerifier')
+    const codeVerifier = window.sessionStorage.getItem('codeVerifier')
 
     const details = {
         'grant_type': 'authorization_code',
-        'client_id': 'authorization-code-flow-with-pkce-demo',
+        'client_id': clientId,
         'code_verifier': codeVerifier,
         'code': code,
-        'redirect_uri': 'http://localhost:8380'
-    };
-
-    const formBody = [];
-    for (const property in details) {
-        formBody.push(property + "=" + details[property]);
+        'redirect_uri': redirectUri
     }
-    const request = formBody.join("&");
 
-    const response = await fetch('http://localhost:8180/realms/OAuth2FlowsTest/protocol/openid-connect/token', {
+    const request = Object.entries(details).map(([key, value]) => `${key}=${value}`).join('&')
+
+    const response = await fetch(tokenEndpoint, {
         method: 'POST',
         body: request,
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded;  charset=UTF-8'
         },
     })
+
     return response.json()
 }
 
 const hasTokenExpired = () => {
-    const expiresAt = Number(window.localStorage.getItem('expiresAt'))
+    const expiresAt = Number(window.sessionStorage.getItem('expiresAt'))
     return expiresAt - 10 * 1000 < Date.now()
 }
 
 const storeNewToken = (accessToken, expiresIn) => {
     const expiresAt = Date.now() + expiresIn * 1000
-    window.localStorage.setItem('accessToken', accessToken)
-    window.localStorage.setItem('expiresAt', expiresAt + '')
+    window.sessionStorage.setItem('accessToken', accessToken)
+    window.sessionStorage.setItem('expiresAt', expiresAt + '')
 }
 
 const removeCodeAndState = () => {
@@ -111,21 +120,22 @@ const startTokenExpirationChecker = () => {
     }, 1000)
 }
 
-if (code && session_state && state) {
+if (code && state) {
     getToken().then(tokens => {
         const { access_token: accessToken, expires_in: expiresIn } = tokens
         console.log(`Token expires in ${expiresIn}`)
         storeNewToken(accessToken, expiresIn)
         removeCodeAndState()
         startTokenExpirationChecker()
+        console.log(`Should redirect to the: ${window.sessionStorage.getItem(state)}`)
     })
 } else {
     if (hasTokenExpired()) {
-        authorize().catch(err => console.error(err))
+        authorize()
+            .catch(err => console.error(err))
     } else {
         startTokenExpirationChecker()
     }
-
 }
 
 

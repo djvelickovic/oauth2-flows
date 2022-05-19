@@ -16,7 +16,7 @@ const showMainPage = () => {
 
 logoutButton.addEventListener('click', (e) => {
     e.preventDefault()
-    window.localStorage.clear()
+    window.sessionStorage.clear()
     showLoginPage()
 })
 
@@ -28,8 +28,8 @@ loginFormElement.addEventListener('submit', async (e) => {
     const password = formData.get('password')
     const tokens = await authorize(username, password)
     const { access_token: accessToken, expires_in: expiresIn } = tokens
-    window.localStorage.setItem('accessToken', accessToken)
-    window.localStorage.setItem('expiresAt', (Date.now() + (+expiresIn) * 1000) + '')
+    window.sessionStorage.setItem('accessToken', accessToken)
+    window.sessionStorage.setItem('expiresAt', (Date.now() + (+expiresIn) * 1000) + '')
 
     loginFormElement.reset()
 
@@ -58,7 +58,7 @@ const authorize = async (username, password) => {
 }
 
 const hasTokenExpired = () => {
-    const expiresAt = +window.localStorage.getItem('expiresAt')
+    const expiresAt = +window.sessionStorage.getItem('expiresAt')
     return expiresAt ?? expiresAt < Date.now()
 }
 
